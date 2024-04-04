@@ -19,7 +19,41 @@
 	crossorigin="anonymous"></script>
 <body>
 	<div class="container pt-4">
+
 		<h1>Scope Demo</h1>
+
+		<div class="row mt-4 mb-4">
+
+			<div class="col">
+				<div class="card">
+					<div class="card-header">Request Scope</div>
+					<div class="card-body">
+						<h1 class="text-center">${requestCount}</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card">
+					<div class="card-header">Session Scope</div>
+					<div class="card-body">
+						<h1 class="text-center">${sessionCount}</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card">
+					<div class="card-header">Application Scope</div>
+					<div class="card-body">
+						<h1 class="text-center">${applicationCount}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<c:url value="/" var="homeLink"></c:url>
+		<a href="${homeLink}" class="btn btn-primary">Load Home</a>
 	</div>
 </body>
 </html>
